@@ -52,7 +52,7 @@ ${PYENV_PATH}/bin/python -m alembic.config $@
 
 #### Create db sql statements ####
 
-create database test;
+CREATE DATABASE IF NOT EXISTS test CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 GRANT ALL PRIVILEGES ON test.* TO 'root'@'localhost' \
   IDENTIFIED BY 'root';

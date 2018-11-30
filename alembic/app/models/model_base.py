@@ -21,5 +21,5 @@ class ModelBase:
             format_data[key] = getattr(self, key)
             if isinstance(format_data[key], datetime):
                 format_data[key] = format_data[key].strftime(PERFECT_TIME_FORMAT)
-            format_data[key] = format_data[key] if format_data[key] else ""
+            format_data[key] = format_data[key] if isinstance(format_data[key], bool) or format_data[key] else ""
         return format_data
