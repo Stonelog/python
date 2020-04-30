@@ -7,7 +7,9 @@
 # Precompiled Headers
 *.gch
 *.pch
+*.pyc
 ./alembic/idea/
+./common/idea/
 
 # Compiled Dynamic libraries
 *.so
